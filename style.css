@@ -1,0 +1,463 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #0A192F;
+  color: white;
+}
+
+
+/*========================= making variable for website color theme ========================= */
+:root {
+  --primary-color: #CCD6F6;
+  --secondary-color: #7783A0;
+}
+
+
+/*========================= nav bar ========================= */
+header nav {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+  position: fixed;
+  top: 0%;
+  z-index: 888;
+}
+
+.links ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  list-style: none;
+}
+
+.links ul a {
+  color: var(--primary-color);
+  text-decoration: none;
+  display: flex;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.links #bar {
+  color: var(--primary-color);
+  text-decoration: none;
+  display: flex;
+  font-weight: 500;
+  font-size: 28px;
+  display: none;
+}
+
+
+/*========================= Mobile menu ========================= */
+.mobile{
+    width: 100%;
+    height: 0px;
+    background: #01122b;
+    padding: 0px 40px;
+    transition: all 1s ease-in-out;
+    position: fixed;
+    top: 100px;
+    z-index: 999;
+  }
+  
+ .contant{
+  height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.6s ease-in-out;
+}
+
+.mobile .contant a {
+  color: var(--primary-color);
+  text-decoration: none;
+  display: flex;
+  font-weight: 500;
+  font-size: 16px;
+  list-style: none;
+}
+
+.hide {
+  width: 100%;
+  height: 250px;
+  transition: all 1s ease-in-out;
+  border-top: 2px solid white;
+}
+
+.hide-contant{
+  visibility:visible;
+  opacity: 100;
+  transition: all 2s ease-in-out;
+}
+
+
+/*========================= Main sectiom ========================= */
+main {
+  padding: 0px 40px;
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+}
+
+
+/*========================= hero sectiom ========================= */
+#hero-section{
+  width: 100%;
+  height: auto;
+  background-color: #01122b;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.left {
+  width: 100%;
+  height: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 40px;
+}
+
+.left .heading {
+  color: var(--primary-color);
+}
+
+.left .name {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.left p {
+  padding-top: 20px;
+  line-height: 30px;
+  color: var(--secondary-color);
+}
+
+.left #element {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.left .list , .list a{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  font-size: 25px;
+  font-weight: 800;
+  padding-top: 20px;
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.list .cv{
+  border: 1px solid black;
+  border-radius: 100%;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 18px;
+  padding: 2px;
+}
+
+.right {
+  width: 100%;
+  height: 100%;
+}
+
+.right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+
+/*========================= About section========================= */
+#about , #skills, #hero-section{
+  width: 100%;
+  height: auto;
+  margin-bottom: 100px;
+}
+
+.main-heading{
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--primary-color);
+  padding: 40px 20px;
+}
+
+.boxes{
+  display: grid;
+  background-color: #01122b;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+
+/*========================= skill section ======================== */
+#skills .grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.box{
+  display: grid;
+  gap: 10px;
+  background-color: #01122b;
+  padding: 40px;
+  border: 1px solid black;
+}
+
+.box .icon{
+  display: grid;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.icon i{
+  font-size: 70px;
+  color: var(--secondary-color);
+}
+
+.box h3{
+  color: var(--primary-color);
+  font-weight: 400 !important;
+}
+
+.box ul{
+  padding-left:20px;
+}
+
+.box li{
+  color: var(--secondary-color);
+  line-height: 25px;
+  font-weight: 600;
+}
+
+
+/*========================= Projects section ======================== */
+#projects{
+  padding: 20px 0px; 
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: #01122b;
+  margin-bottom: 20px;
+  padding: 20px 0px; 
+}
+
+.flex .info{
+  width: 100%;
+  padding: 20px;
+}
+
+.info span{
+  color: var(--primary-color);
+  text-decoration: none;
+  display: flex;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+.info h1{
+  color: var(--primary-color);
+  padding-bottom: 10px;
+}
+
+.info p{
+  color: var(--secondary-color);
+}
+
+.flex .list {
+  padding-top: 20px;
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.flex .list li{
+  border: 2px solid var(--secondary-color);
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  padding-top: 2px;
+  border-radius: 10px;
+}
+
+.flex .share-box , a{
+  padding-top: 20px;
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.flex .thumbnail{
+  width: 100%;
+}
+
+.thumbnail img{
+  border-radius: 10px;
+  filter: opacity(50%);
+  width: 100%;
+}
+
+.thumbnail img:hover{
+  transition: all .3s ease-in-out;
+  filter: opacity(100%);
+}
+
+
+/*========================= footer ======================== */
+footer {
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+
+/*========================= loader ======================== */
+.loader-page {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 999;
+  background-color: black;
+}
+
+.loader-page img {
+  width: 100px;
+}
+
+.loader {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  position: relative;
+}
+
+.loader::after,
+.loader::before {
+  content: '';
+  width: 100px;
+  height: 100px;
+  border: 2px solid #FFF;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  animation: rotation 2s ease-in-out infinite;
+}
+
+.loader::after {
+  border-color: #FF3D00;
+  animation-delay: 1s;
+}
+
+
+/*=========================Media query for responsivness ======================== */
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  main {
+    padding: 0%;
+  }
+}
+
+@media screen and (max-width: 1024px){
+
+  #skills .grid{
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 20px;
+}
+
+.flex{
+  gap: 20px;
+  flex-direction: column;
+}
+
+.flex .info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+}
+
+@media screen and (max-width: 768px) {
+
+  header nav {
+    padding: 0px 20px;
+  }
+
+  nav .links ul {
+    display: none;
+  }
+
+  #hero-section {
+    grid-template-columns: 1fr;
+    padding: 50px 0px;
+    gap: 50px;
+  }
+
+  .links #bar {
+    display: block;
+  }
+
+  .left {
+    padding: 0px 20px;
+  }
+
+  .boxes{
+  grid-template-columns: 1fr;
+  padding-bottom: 50px;
+}
+
+.box{
+  padding: 20px;
+}
+
+}
